@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 exports.config = {
   //
   // ====================
@@ -93,7 +95,7 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: "https://localhost:3000/",
+  baseUrl: process.env.URL,
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
